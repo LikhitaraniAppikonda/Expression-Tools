@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expression Tools</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center; 
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .header {
+            margin-bottom: 40px;
+        }
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+        .tools-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .tool-card {
+            width: 300px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .card-icon {
+            font-size: 3rem;
+            margin: 20px 0;
+            color: #3498db;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .card-content p {
+            color: #7f8c8d;
+            line-height: 1.5;
+        }
+        .evaluation-card {
+            border-top: 5px solid #2ecc71;
+        }
+        .conversion-card {
+            border-top: 5px solid #e74c3c;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Expression Tools</h1>
+        <p class="subtitle">Visualize and understand expression processing</p>
+    </div>
+    
+    <div class="tools-container">
+        <div class="tool-card evaluation-card" onclick="location.href='evaluation/index.html'">
+            <div class="card-content">
+                <div class="card-icon">🧮</div>
+                <h2>Expression Evaluation</h2>
+                <p>Step-by-step visualization of arithmetic expression evaluation using two-stack algorithm</p>
+            </div>
+        </div>
+        
+        <div class="tool-card conversion-card" onclick="location.href='conversion/index.html'">
+            <div class="card-content">
+                <div class="card-icon">🔄</div>
+                <h2>Expression Conversion</h2>
+                <p>Convert between infix, prefix and postfix notations with detailed explanations</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

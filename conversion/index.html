@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expression Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-button">← Back to Main Menu</a>
+        
+        <!-- First Component -->
+        <div class="component">
+            <div class="input-group">
+                <label for="expression">Enter Expression:</label>
+                <input type="text" id="expression" placeholder="e.g., a + b * c">
+            </div>
+            <div class="dropdown-group">
+                <div>
+                    <label for="from">From:</label>
+                    <select id="from">
+                        <option value="infix">Infix</option>
+                        <option value="prefix">Prefix</option>
+                        <option value="postfix">Postfix</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="to">To:</label>
+                    <select id="to">
+                        <option value="infix">Infix</option>
+                        <option value="prefix">Prefix</option>
+                        <option value="postfix">Postfix</option>
+                    </select>
+                </div>
+            </div>
+            <button class="start-button" onclick="startConversion()">Start Conversion</button>
+        </div>
+
+        <!-- Glowing Tokens Visualization -->
+        <div class="component tokens-component">
+            <h3>Expression Tokens</h3>
+            <div class="element-container" id="element-container">
+                <ul class="token-list" id="token-list"></ul>
+            </div>
+            <div class="buttons">
+                <button id="prevBtn" onclick="previousStep()" disabled>Previous</button>
+                <button id="nextBtn" onclick="nextStep()" disabled>Next</button>
+            </div>
+        </div>
+
+        <!-- Second Component -->
+        <div class="component stack-component">
+            <div class="visualization-container">
+                <!-- Stack Visualization -->
+                <div class="stack-section">
+                    <h3>Stack</h3>
+                    <div id="stack"></div>
+                </div>
+
+                <!-- Description and Output Section -->
+                <div class="description-output-section">
+                    <div class="description-section">
+                        <h3>Step Description</h3>
+                        <div id="step-description"></div>
+                    </div>
+                    <div class="output-section">
+                        <h3>Output</h3>
+                        <div id="output"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scriptFinal.js"></script>
+</body>
+</html>

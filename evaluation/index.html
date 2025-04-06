@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two-Stack Expression Evaluation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <a href="../index.html" class="back-button">← Back to Main Menu</a>
+        
+        <!-- Input Section -->
+        <div class="input-section">
+            <input type="text" id="expressionInput" placeholder="Enter an expression (e.g., 3 + 5 * (2 - 8))">
+            <button class="eval-button" onclick="startProcessing()">Evaluate</button>
+            <h3 id="result"></h3>
+            <div class="nav-buttons">
+                <button id="prevBtn" onclick="previousStep()" disabled>Previous</button>
+                <button id="nextBtn" onclick="nextStep()" disabled>Next</button>
+            </div>
+        </div>
+
+        <!-- Visualization Section -->
+        <div class="visualization-section">
+            <!-- Stacks -->
+            <div class="stacks-container">
+                <div class="stack-group">
+                    <h3>Operand Stack</h3>
+                    <div class="stack-container" id="operands"></div>
+                </div>
+                <div class="stack-group">
+                    <h3>Operator Stack</h3>
+                    <div class="stack-container" id="operators"></div>
+                </div>
+            </div>
+
+            <!-- Explanation -->
+            <div class="explanation-section">
+                <div id="explanation"></div>
+                <h4>Operation on POPPED Elements</h4>
+                <div class="evaluation" id="evaluation"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
